@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    padding: 50px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+/* Home */
+#home {
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+/* Contact */
+#contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
