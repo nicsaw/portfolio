@@ -65,6 +65,12 @@ section {
 #contact ul {
     list-style-type: none;
     padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact img {
+    max-width: 100px;
 }
 
 /* Footer */
