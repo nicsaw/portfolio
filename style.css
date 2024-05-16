@@ -38,8 +38,10 @@ header {
     top: 0;
     width: 100%;
     box-sizing: border-box;
+
     display: flex;
     justify-content: space-between;
+
     background-color: #333;
     color: white;
     padding: 15px;
@@ -57,12 +59,24 @@ header ul {
 header a {
     font-family: 'Reem Kufi';
     text-decoration: none;
-    text-align: center;
     color: white;
+    position: relative;
+    transition: color 0.3s;
 }
 
-header a:hover {
-    background-color: darkgray;
+header a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+header a:hover::after {
+    width: 100%;
 }
 
 /* Home */
