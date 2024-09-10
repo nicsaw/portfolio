@@ -1,6 +1,6 @@
 import UnderlineLink from './UnderlineLink';
 
-export default function Navbar() {
+export default function NavBar() {
   return (
     <nav className="bg-neutral p-4 flex justify-between items-center mx-auto">
       <UnderlineLink href="/" className="text-lg font-bold">

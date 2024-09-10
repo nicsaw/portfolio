@@ -1,9 +1,9 @@
-import Navbar from '../components/Navbar.jsx';
+import NavBar from '../components/NavBar.jsx';
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <NavBar />
     </>
   );
 }
