@@ -1,5 +1,3 @@
-// src/components/Navbar.js
-
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -7,7 +5,7 @@ export default function Navbar() {
     <nav className="bg-neutral p-4 flex justify-between items-center mx-auto">
       <Link
         href="/"
-        className="text-primary hover:text-secondary text-lg font-bold"
+        className="text-primary text-lg font-bold relative after:bg-secondary after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
       >
         Nicholas Matthew Saw
       </Link>
