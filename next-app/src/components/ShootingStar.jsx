@@ -7,8 +7,8 @@ const starSize = 50;
 const getRandom = (min, max) => Math.random() * (max - min) + min;
 
 export default function ShootingStar() {
-  const [initialX, setInitialX] = useState(0);
-  const [finalX, setFinalX] = useState(0);
+  const [initialX, setInitialX] = useState(getRandom(0, window.innerWidth));
+  const [finalX, setFinalX] = useState(getRandom(0, window.innerWidth));
 
   useEffect(() => {
     setInitialX(getRandom(0, window.innerWidth));
