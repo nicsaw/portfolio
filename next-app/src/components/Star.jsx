@@ -1,8 +1,8 @@
-export default function Star() {
+export default function Star({ size = 50 }) {
   return (
     <svg
-      width="50px"
-      height="50px"
+      width={`${size}px`}
+      height={`${size}px`}
       viewBox="0 0 24 24"
       fill="yellow"
       xmlns="http://www.w3.org/2000/svg"

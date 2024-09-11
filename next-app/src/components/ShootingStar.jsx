@@ -1,17 +1,26 @@
 import Star from './Star';
 import { motion } from 'framer-motion';
 
+const starSize = 50;
+
 const getRandom = (min, max) => Math.random() * (max - min) + min;
 
 export default function ShootingStar() {
+  const initialX = getRandom(0, window.innerWidth);
+  const finalX = getRandom(0, window.innerWidth);
+
   return (
     <motion.div
-      className="fixed top-0 left-0"
-      initial={{ x: -100, y: -100, rotate: 0 }}
-      animate={{ x: '100vw', y: '100vh', rotate: 360 }}
-      transition={{ duration: 10, ease: 'linear' }}
+      className="fixed"
+      initial={{ x: initialX, y: -100 }}
+      animate={{
+        x: finalX,
+        y: '100vh',
+        rotate: initialX <= finalX ? 360 : -360,
+      }}
+      transition={{ duration: 2, ease: 'linear' }}
     >
-      <Star />
+      <Star size={starSize} />
     </motion.div>
   );
 }
