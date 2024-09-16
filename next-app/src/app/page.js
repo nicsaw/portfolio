@@ -1,7 +1,3 @@
-'use client';
-
-import NavBar from '@/components/NavBar.jsx';
-import Footer from '@/components/Footer.jsx';
 import Banner from '@/components/Banner.jsx';
 import ShootingStar from '@/components/ShootingStar';
 

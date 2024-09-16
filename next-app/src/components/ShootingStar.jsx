@@ -1,19 +1,25 @@
+'use client';
+
 import Star from './Star';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const starSize = 50;
 
-const getRandom = (min, max) => Math.random() * (max - min) + min;
-
 export default function ShootingStar() {
-  const [initialX, setInitialX] = useState(getRandom(0, window.innerWidth));
-  const [finalX, setFinalX] = useState(getRandom(0, window.innerWidth));
+  const [initialX, setInitialX] = useState(null);
+  const [finalX, setFinalX] = useState(null);
+
+  const getRandom = (min, max) => Math.random() * (max - min) + min;
 
   useEffect(() => {
-    setInitialX(getRandom(0, window.innerWidth));
-    setFinalX(getRandom(0, window.innerWidth));
+    if (typeof window !== 'undefined') {
+      setInitialX(getRandom(0, window.innerWidth));
+      setFinalX(getRandom(0, window.innerWidth));
+    }
   }, []);
+
+  if (initialX === null || finalX === null) return null;
 
   return (
     <motion.div
